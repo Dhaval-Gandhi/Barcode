@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'slim'
+gem 'barby',  '~> 0.6.2'
+gem 'rqrcode','~> 0.4.2'
+gem 'chunky_png', '~> 1.3', '>= 1.3.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

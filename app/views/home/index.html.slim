@@ -1,3 +1,22 @@
-h1 hello
-p
-  = image_tag generate_qr("Hello"), class: 'qr-code'
+h1.text-center.text-blue Enter whatever you want
+br
+textarea#str-1.text-center
+br
+button#btn-submit.text-center submit
+#qr.margin-center.text-center
+  = render 'qr_png'
+
+javascript:
+  $(document).ready(function() {
+    $('#btn-submit').click(function() {
+      var txt = $('#str-1').val();
+      $.ajax({
+        data: {
+          text : txt
+        },
+        type: 'GET',
+        url: 'home',
+        dataType: 'script'
+      });
+    });
+  });
